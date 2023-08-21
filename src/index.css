@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.square {
+		@apply text-white pb-1 w-24 h-24 border-2 border-solid border-gray-300 rounded-xl grid place-items-center cursor-pointer text-5xl text-center justify-center;
+	}
+	.square.is-selected {
+		@apply text-white bg-blue-500;
+	}
+	.turn .square,
+	.winner .square {
+		@apply w-16 h-16 pointer-events-none border-none mt-3;
+	}
+}
